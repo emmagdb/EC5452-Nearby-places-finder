@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>map test</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+		#map {
+			height: 500px;
+			width: 100%;
+		}
+	</style>
+	<script src="https://maps.googleapis.com/maps/api/js?key=MYAPIKEY&libraries=places&callback=initMap" async defer></script>
+	<script type="text/javascript" src="./test.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-4 col-md-2">
+				<h4>CERCA DE TI:</h4>
+				<button class="btn btn-default btn-block btn-xs" style="text-align: left;" onclick="changeType('hospital')">
+					<i class="material-icons" style="vertical-align: middle;">local_hospital</i> Hospitales
+				</button>
+				<button class="btn btn-default btn-block btn-xs" style="text-align: left;" onclick="changeType('restaurant')">
+					<i class="material-icons" style="vertical-align: middle;">local_dining</i> Restaurantes
+				</button>
+				<button class="btn btn-default btn-block btn-xs" style="text-align: left;" onclick="changeType('cafe')">
+					<i class="material-icons" style="vertical-align: middle;">local_cafe</i> Cafés
+				</button>
+				<button class="btn btn-default btn-block btn-xs" style="text-align: left;" onclick="changeType('pharmacy')">
+					<i class="material-icons" style="vertical-align: middle;">local_pharmacy</i> Farmacias
+				</button>
+				<button class="btn btn-default btn-block btn-xs" style="text-align: left;" onclick="changeType('atm')">
+					<i class="material-icons" style="vertical-align: middle;">local_atm</i> Cajeros Automáticos
+				</button>
+				<button class="btn btn-default btn-block btn-xs" style="text-align: left;" onclick="changeType('bank')">
+					<i class="material-icons" style="vertical-align: middle;">attach_money</i> Bancos
+				</button>
+				<button class="btn btn-default btn-block btn-xs" style="text-align: left;" onclick="changeType('convenience_store')">
+					<i class="material-icons" style="vertical-align: middle;">local_grocery_store</i> Automercados
+				</button>
+				<button class="btn btn-default btn-block btn-xs" style="text-align: left;" onclick="changeType('lodging')">
+					<i class="material-icons" style="vertical-align: middle;">local_hotel</i> Hoteles
+				</button>
+				<button class="btn btn-default btn-block btn-xs" style="text-align: left;" onclick="changeType('movie_theater')">
+					<i class="material-icons" style="vertical-align: middle;">movie</i> Cines
+				</button>
+				<button class="btn btn-default btn-block btn-xs" style="text-align: left;" onclick="changeType('gas_station')">
+					<i class="material-icons" style="vertical-align: middle;">local_gas_station</i> Gasolinera
+				</button>
+				<button class="btn btn-default btn-block btn-xs" style="text-align: left;" onclick="changeType('parking')">
+					<i class="material-icons" style="vertical-align: middle;">local_parking</i> Estacionamiento
+				</button>
+				<button class="btn btn-default btn-block btn-xs" style="text-align: left;" onclick="changeType('park')">
+					<i class="material-icons" style="vertical-align: middle;">local_florist</i> Parques
+				</button>
+				<button class="btn btn-default btn-block btn-xs" style="text-align: left;" onclick="changeType('museum')">
+					<i class="material-icons" style="vertical-align: middle;">account_balance</i> Museos
+				</button>
+				<button class="btn btn-default btn-block btn-xs" style="text-align: left;" onclick="changeType('night_club')">
+					<i class="material-icons" style="vertical-align: middle;">local_bar</i> Bares y Discotecas
+				</button>
+			</div>
+			<div class="col-xs-8 col-md-10">
+				<br>
+				<div id="map"  style="border-radius: 4px"></div>
+				<br>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
